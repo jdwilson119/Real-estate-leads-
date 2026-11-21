@@ -231,3 +231,18 @@ p{margin:0 0 1em}
   .form,.contact-card{padding:26px}
   .footer-grid{grid-template-columns:1fr}
 }
+
+/* Text-based feature panels (replace illustrations) */
+.info-panel{background:var(--forest);color:#dbe7e1;border-radius:20px;padding:40px;box-shadow:var(--shadow)}
+.info-panel h3{color:#fff;margin-bottom:1em}
+.info-panel .contact-item:last-child{margin-bottom:0}
+.check-list--light{margin:0}
+.check-list--light li{color:#e6efe9}
+.icon-lg{width:64px;height:64px;border-radius:14px;background:#e5efe9;color:var(--forest-2);display:grid;place-items:center;margin-bottom:22px}
+.icon-lg svg{width:32px;height:32px}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:14px 24px;margin:0}
+.facts dt{font-family:var(--font-head);font-weight:600;color:#f2b072}
+.facts dd{margin:0;color:#e6efe9}
+.project__body .icon{width:50px;height:50px;border-radius:12px;background:#e5efe9;color:var(--forest-2);display:grid;place-items:center;margin-bottom:18px}
+.project__body .icon svg{width:26px;height:26px}
+@media (max-width:640px){.info-panel{padding:28px}.facts{grid-template-columns:1fr;gap:4px}.facts dd{margin-bottom:12px}}

@@ -35,33 +35,6 @@ ICON = {
  "shield": '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>',
 }
 
-# ---------- Illustrations (original SVG, no stock photos needed) ----------
-HERO_ART = '''<svg class="hero__art" viewBox="0 0 1440 700" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-<defs><linearGradient id="hs" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f2b072" stop-opacity=".35"/><stop offset="1" stop-color="#f2b072" stop-opacity="0"/></linearGradient></defs>
-<circle cx="1150" cy="190" r="120" fill="url(#hs)"/><circle cx="1150" cy="190" r="52" fill="#f2b072" opacity=".55"/>
-<g fill="none" stroke="#ffffff" stroke-opacity=".07" stroke-width="1.5">
-<path d="M0 420 Q 360 330 720 400 T 1440 360"/><path d="M0 450 Q 360 360 720 430 T 1440 390"/><path d="M0 480 Q 360 390 720 460 T 1440 420"/><path d="M0 390 Q 360 300 720 370 T 1440 330"/><path d="M0 360 Q 360 270 720 340 T 1440 300"/></g>
-<path d="M0 560 L180 470 L300 520 L470 420 L620 500 L760 450 L900 520 L1060 440 L1220 500 L1440 430 V700 H0Z" fill="#164b40"/>
-<path d="M0 610 L200 545 L380 590 L560 530 L760 600 L960 540 L1160 600 L1440 545 V700 H0Z" fill="#1f5c4c"/>
-<path d="M0 650 C 300 615 520 680 820 640 S 1260 630 1440 650 V700 H0Z" fill="#c8742c" opacity=".55"/>
-<g fill="#2f7a5f"><path d="M980 560 l12 -40 l12 40z"/><path d="M1010 565 l10 -32 l10 32z"/><path d="M1300 565 l14 -46 l14 46z"/><path d="M120 600 l12 -38 l12 38z"/><path d="M150 605 l9 -28 l9 28z"/></g>
-</svg>'''
-
-def scene(kind, h1="#0e3b33", h2="#1f5c4c"):
-    """Small decorative landscape panels, varied per section."""
-    if kind == "rehab":
-        return f'''<svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of rehabilitated landscape"><rect width="500" height="400" fill="#dfe9e2"/><circle cx="380" cy="90" r="40" fill="#f2b072"/><path d="M0 250 L120 170 L200 220 L300 140 L500 240 V400 H0Z" fill="#9cc2ad"/><path d="M0 300 C 120 260 260 330 500 280 V400 H0Z" fill="#3f8f6b"/><path d="M0 345 C 160 320 330 370 500 335 V400 H0Z" fill="{h1}"/><g fill="#2a6b52"><path d="M70 300 l16 -55 l16 55z"/><path d="M105 305 l12 -40 l12 40z"/><path d="M380 290 l18 -60 l18 60z"/><path d="M420 295 l12 -40 l12 40z"/></g></svg>'''
-    if kind == "site":
-        return f'''<svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of remediation works on site"><rect width="500" height="400" fill="{h1}"/><g stroke="#fff" stroke-opacity=".08" fill="none"><path d="M0 120 Q250 60 500 120"/><path d="M0 150 Q250 90 500 150"/><path d="M0 180 Q250 120 500 180"/></g><path d="M0 260 H500 V400 H0Z" fill="#8a5a33"/><path d="M0 300 H500 V400 H0Z" fill="#6e4628"/><path d="M0 340 H500 V400 H0Z" fill="#553520"/><path d="M60 260 L140 200 L230 260Z" fill="#a8743f"/><rect x="290" y="210" width="110" height="40" rx="6" fill="#c8742c"/><rect x="300" y="190" width="40" height="26" rx="4" fill="#e09a59"/><circle cx="312" cy="254" r="12" fill="#1a1a1a"/><circle cx="380" cy="254" r="12" fill="#1a1a1a"/><path d="M400 215 L450 170 L470 190" stroke="#c8742c" stroke-width="9" fill="none" stroke-linecap="round"/><path d="M462 186 l18 16 l-22 8z" fill="#e09a59"/><circle cx="420" cy="80" r="30" fill="#f2b072" opacity=".7"/></svg>'''
-    if kind == "water":
-        return f'''<svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of groundwater layers"><rect width="500" height="400" fill="#e9e3d6"/><path d="M0 120 H500 V400 H0Z" fill="#c9a77f"/><path d="M0 200 H500 V400 H0Z" fill="#a8825a"/><path d="M0 270 C 120 255 260 285 500 265 V400 H0Z" fill="#3f7f8f"/><path d="M0 320 C 140 305 300 335 500 315 V400 H0Z" fill="#2c6170"/><rect x="230" y="60" width="16" height="250" fill="{h1}"/><rect x="220" y="50" width="36" height="20" rx="3" fill="#c8742c"/><path d="M0 120 L80 90 L160 115 L260 85 L380 112 L500 92 V120 H0Z" fill="#3f8f6b"/></svg>'''
-    if kind == "team":
-        return f'''<svg viewBox="0 0 500 400" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Illustration of site team"><rect width="500" height="400" fill="{h2}"/><circle cx="400" cy="90" r="46" fill="#f2b072" opacity=".6"/><path d="M0 300 C 160 270 330 320 500 290 V400 H0Z" fill="#164b40"/><g><circle cx="170" cy="190" r="22" fill="#e8c9a7"/><path d="M146 186 a24 22 0 0 1 48 0z" fill="#f2c94c"/><path d="M135 300 v-60 a35 35 0 0 1 70 0 v60z" fill="#c8742c"/><path d="M150 245 h40 M150 262 h40" stroke="#e8e8e8" stroke-width="5"/></g><g><circle cx="300" cy="175" r="24" fill="#c99b74"/><path d="M274 171 a26 24 0 0 1 52 0z" fill="#ffffff"/><path d="M262 300 v-66 a38 38 0 0 1 76 0 v66z" fill="#e08a3a"/><path d="M280 240 h40 M280 258 h40" stroke="#e8e8e8" stroke-width="5"/></g></svg>'''
-    return ""
-
-def project_art(c1, c2, accent):
-    return f'''<svg class="project__art" viewBox="0 0 400 250" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><rect width="400" height="250" fill="{c1}"/><circle cx="320" cy="60" r="26" fill="{accent}" opacity=".7"/><path d="M0 170 L90 120 L160 150 L250 100 L400 160 V250 H0Z" fill="{c2}"/><path d="M0 210 C 120 190 260 230 400 200 V250 H0Z" fill="{accent}" opacity=".45"/></svg>'''
-
 # ---------- Shared layout ----------
 AC = ' aria-current="page"'
 NAV = [("index.html","Home"),("services.html","Services"),("projects.html","Projects"),("about.html","About")]
@@ -122,8 +95,8 @@ def page(fname, title, desc, body, active=None):
 '''
     (OUT/fname).write_text(html, encoding="utf-8")
 
-def cta():
-    return f'''<section class="section" style="padding-top:0"><div class="container"><div class="cta reveal">
+def cta(top=False):
+    return f'''<section class="section"{"" if top else ' style="padding-top:0"'}><div class="container"><div class="cta reveal">
 <div><h2>Got a site that needs attention?</h2><p>Tell us what you're dealing with. We'll come back to you within one business day with practical next steps and a no-obligation quote.</p></div>
 <div class="btn-row"><a class="btn btn--dark" href="contact.html">Request a quote</a><a class="btn btn--ghost" href="tel:{C["phone_link"]}">Call {C["phone"]}</a></div>
 </div></div></section>'''
@@ -146,7 +119,7 @@ SERVICES = [
 # ================= HOME =================
 svc_cards = "".join(f'''<article class="card reveal"><div class="icon">{ICON[ic]}</div><h3>{t}</h3><p>{d}</p><a class="more" href="services.html#{sid}">Learn more →</a></article>''' for sid,ic,t,d,_ in SERVICES)
 home = f'''
-<section class="hero">{HERO_ART}<div class="container">
+<section class="hero"><div class="container">
 <span class="eyebrow" style="color:#f2b072">Environmental remediation · Perth, WA</span>
 <h1>Restoring land to <em>safe, productive</em> use.</h1>
 <p class="lead">RemX Australia is an Ascot-based remediation and contracting business. We clean up contaminated sites, carry out mine closure works and rehabilitate disturbed land for industry, government and developers across Western Australia.</p>
@@ -176,7 +149,12 @@ home = f'''
 <li><strong>Straightforward pricing.</strong> Clear scopes, honest variations and no surprises at the end of the job.</li>
 </ul>
 <a class="btn btn--dark" href="about.html">About RemX</a></div>
-<div class="panel-art reveal">{scene("site")}</div>
+<div class="info-panel reveal">
+<div class="contact-item">{ICON["pin"]}<div><strong>Based in Ascot, Perth</strong>Close to the airport and eastern industrial areas, with crews ready for regional and remote WA.</div></div>
+<div class="contact-item">{ICON["shield"]}<div><strong>Safety first</strong>Each job gets its own safety and environmental management plans and inducted crews.</div></div>
+<div class="contact-item">{ICON["drum"]}<div><strong>Waste tracked</strong>Waste is classified, transported and documented on every load.</div></div>
+<div class="contact-item">{ICON["truck"]}<div><strong>Our own crews &amp; plant</strong>We do the work ourselves, managed end to end.</div></div>
+</div>
 </div></section>
 
 <section class="section section--dark"><div class="container">
@@ -200,14 +178,13 @@ page("index.html","RemX Australia | Environmental Remediation & Mine Closure, Pe
 
 # ================= SERVICES =================
 blocks = []
-scenes = ["site","rehab","rehab","site","water","site"]
 for i,(sid,ic,t,d,items) in enumerate(SERVICES):
     lis = "".join(f"<li>{x}</li>" for x in items)
-    rev = " split--rev" if i % 2 else ""
+    rev = ""
     bg = " section--sand" if i % 2 else ""
     blocks.append(f'''<section class="section{bg}" id="{sid}"><div class="container split{rev}">
-<div class="reveal"><div class="card" style="padding:0;border:0;background:none"><div class="icon">{ICON[ic]}</div></div><h2>{t}</h2><p class="lead">{d}</p><ul class="check-list">{lis}</ul><a class="btn btn--dark" href="contact.html?service={sid}">Enquire about this service</a></div>
-<div class="panel-art reveal">{scene(scenes[i])}</div></div></section>''')
+<div class="reveal"><div class="icon-lg">{ICON[ic]}</div><h2>{t}</h2><p class="lead">{d}</p><a class="btn btn--dark" href="contact.html?service={sid}">Enquire about this service</a></div>
+<div class="info-panel reveal"><h3>What's included</h3><ul class="check-list check-list--light">{lis}</ul></div></div></section>''')
 services = f'''
 <section class="page-hero"><div class="container"><div class="crumbs"><a href="index.html">Home</a> / Services</div>
 <h1>Remediation services across Western Australia</h1>
@@ -229,22 +206,21 @@ page("services.html","Services | RemX Australia — Remediation, Mine Closure & 
 
 # ================= PROJECTS =================
 PROJ = [
- ("Contaminated land","Former service station remediation","Removing underground fuel tanks, excavating and disposing of hydrocarbon-impacted soil, and supporting validation so the site can be redeveloped.","#0e3b33","#1f5c4c","#c8742c"),
- ("Mine closure","Exploration camp &amp; pad closure","Decommissioning infrastructure, removing waste, reshaping disturbed areas and preparing ground for revegetation at a remote WA site.","#3b2a1d","#8a5a33","#f2b072"),
- ("Rehabilitation","Drill pad &amp; track rehabilitation","Ripping, respreading topsoil and seeding cleared exploration tracks and drill pads to support native vegetation regrowth.","#2a6b52","#3f8f6b","#f2c94c"),
- ("Industrial","Legacy industrial site clean-up","Segregating mixed fill, managing asbestos-containing material with licensed partners, and removing legacy drums and chemical waste.","#1d3a4a","#3f7f8f","#c8742c"),
- ("Development","Residential subdivision pre-works","Identifying and removing impacted fill before civil works start, keeping the developer's programme on track.","#40311f","#a8743f","#e09a59"),
- ("Water","Dewatering &amp; water treatment support","Managing impacted groundwater encountered during excavation with temporary collection, treatment and containment.","#163c48","#2c6170","#9cc2ad"),
+ ("Contaminated land","Former service station remediation","Removing underground fuel tanks, excavating and disposing of hydrocarbon-impacted soil, and supporting validation so the site can be redeveloped.","soil"),
+ ("Mine closure","Exploration camp &amp; pad closure","Decommissioning infrastructure, removing waste, reshaping disturbed areas and preparing ground for revegetation at a remote WA site.","mine"),
+ ("Rehabilitation","Drill pad &amp; track rehabilitation","Ripping, respreading topsoil and seeding cleared exploration tracks and drill pads to support native vegetation regrowth.","leaf"),
+ ("Industrial","Legacy industrial site clean-up","Segregating mixed fill, managing asbestos-containing material with licensed partners, and removing legacy drums and chemical waste.","drum"),
+ ("Development","Residential subdivision pre-works","Identifying and removing impacted fill before civil works start, keeping the developer's programme on track.","truck"),
+ ("Water","Dewatering &amp; water treatment support","Managing impacted groundwater encountered during excavation with temporary collection, treatment and containment.","water"),
 ]
-cards = "".join(f'''<article class="project reveal">{project_art(c1,c2,a)}<div class="project__body"><span class="project__tag">{tag}</span><h3 style="margin-top:.4em">{t}</h3><p>{d}</p></div></article>''' for tag,t,d,c1,c2,a in PROJ)
+cards = "".join(f'''<article class="project reveal"><div class="project__body"><div class="icon">{ICON[ic]}</div><span class="project__tag">{tag}</span><h3 style="margin-top:.4em">{t}</h3><p>{d}</p></div></article>''' for tag,t,d,ic in PROJ)
 projects = f'''
 <section class="page-hero"><div class="container"><div class="crumbs"><a href="index.html">Home</a> / Projects</div>
 <h1>The kind of work we deliver</h1>
 <p class="lead">Every site is different, but the goal is the same: leave it safe, compliant and ready for its next use. Here are typical projects RemX delivers for clients across WA.</p></div></section>
 <section class="section"><div class="container"><div class="grid grid-3">{cards}</div></div></section>
-<section class="section section--sand"><div class="container split">
-<div class="reveal"><span class="eyebrow">Your project</span><h2>Got a site with a story?</h2><p class="lead">Whether it's a single tank pull or a multi-stage closure programme, we'd like to hear about it. Send through your reports or a few photos and we'll tell you how we'd approach it.</p><a class="btn btn--primary" href="contact.html">Start a conversation</a></div>
-<div class="panel-art reveal">{scene("rehab")}</div></div></section>
+<section class="section section--sand"><div class="container">
+<div class="reveal center" style="max-width:760px;text-align:center"><span class="eyebrow">Your project</span><h2>Got a site with a story?</h2><p class="lead center">Whether it's a single tank pull or a multi-stage closure programme, we'd like to hear about it. Send through your reports or a few photos and we'll tell you how we'd approach it.</p><a class="btn btn--primary" href="contact.html">Start a conversation</a></div></div></section>
 {cta()}
 '''
 page("projects.html","Projects | RemX Australia — Remediation Work in Western Australia",
@@ -260,7 +236,8 @@ about = f'''
 <p>RemX Australia was set up to fill a gap between environmental consultants and general civil contractors: a team that knows earthworks <em>and</em> understands contamination, waste regulations and closure requirements.</p>
 <p>From our base in Ascot, close to Perth Airport and the city's eastern industrial areas, we support clients across the metro area and out to regional and remote Western Australia. Our crews are trained for contaminated and hazardous environments, and our project managers keep consultants, clients and regulators informed at every stage.</p>
 <p>We're growing, and we're investing in people, plant and systems to take on larger and more complex projects across Australia.</p></div>
-<div class="panel-art reveal">{scene("team")}</div></div></section>
+<div class="info-panel reveal"><h3>At a glance</h3>
+<dl class="facts"><dt>Company</dt><dd>{C["legal"]}</dd><dt>Head office</dt><dd>{C["suburb"]}, Perth WA {C["postcode"]}</dd><dt>Service area</dt><dd>Perth metro, regional &amp; remote Western Australia</dd><dt>Specialties</dt><dd>Contaminated land, mine closure, rehabilitation, hazardous materials</dd><dt>Clients</dt><dd>Mining, government, developers, industry &amp; consultants</dd></dl></div></div></section>
 <section class="section section--sand"><div class="container">
 <div class="section-head"><span class="eyebrow">Our values</span><h2>What you can expect from us</h2></div>
 <div class="grid grid-2">
@@ -277,11 +254,11 @@ about = f'''
 <li>Waste classification, tracking and disposal records for every load</li>
 <li>Work carried out in line with WA environmental and WHS legislation</li>
 </ul><a class="btn btn--dark" href="contact.html">Talk to our team</a></div>
-<div class="panel-art reveal" style="display:grid;place-items:center;background:#e5efe9;color:var(--forest-2)"><div style="width:42%">{ICON["shield"]}</div></div></div></section>
+<div class="info-panel reveal" style="display:grid;place-items:center;min-height:280px"><div style="width:120px;color:#f2b072">{ICON["shield"]}</div></div></div></section>
 <section class="section section--dark"><div class="container split">
 <div><span class="eyebrow" style="color:#f2b072">Careers</span><h2>Join a growing WA team.</h2><p class="lead">We're always keen to hear from plant operators, supervisors, project managers and environmental professionals who take pride in their work.</p></div>
 <div><a class="btn btn--primary" href="mailto:{C["email"]}?subject=Careers%20enquiry">Send us your CV</a></div></div></section>
-{cta()}
+{cta(top=True)}
 '''
 page("about.html","About | RemX Australia — Perth Remediation Contractors",
      "Learn about RemX Australia, an environmental remediation and contracting business based in Ascot, Perth, WA. Safety-first crews for contaminated land and mine closure.", about)
